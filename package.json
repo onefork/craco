@@ -1,22 +1,47 @@
 {
-    "private": true,
-    "scripts": {
-        "publish": "lerna publish --progress --force-publish",
-        "publish:alpha": "lerna publish --npm-tag alpha --progress",
-        "bootstrap": "lerna bootstrap"
+    "name": "@craco/craco",
+    "description": "Create React App Configuration Override, an easy and comprehensible configuration layer for create-react-app v2.",
+    "scripts": {},
+    "publishConfig": {
+        "access": "public"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sharegate/craco.git"
+    },
+    "keywords": [
+        "react",
+        "create-react-app",
+        "cra"
+    ],
+    "author": "Groupe Sharegate inc.",
     "license": "Apache-2.0",
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
+    "bugs": {
+        "url": "https://github.com/sharegate/craco/issues"
+    },
+    "homepage": "https://github.com/sharegate/craco",
+    "engines": {
+        "node": ">=6"
+    },
+    "files": [
+        "bin",
+        "lib",
+        "scripts",
+        "index.js"
+    ],
+    "bin": {
+        "craco": "./bin/craco.js"
+    },
+    "peerDependencies": {
+        "react-scripts": "*"
     },
     "devDependencies": {
-        "eslint": "5.7.0",
-        "husky": "1.1.4",
-        "jest": "23.6.0",
-        "lerna": "3.4.3",
-        "lint-staged": "8.0.4",
-        "prettier": "1.15.2"
-    }
+        "react-scripts": "2.1.1"
+    },
+    "dependencies": {
+        "cross-spawn": "6.0.5",
+        "lodash.mergewith": "4.6.1",
+        "webpack-merge": "4.1.4"
+    },
+    "version": "4.1.0-nw-react-scripts"
 }
