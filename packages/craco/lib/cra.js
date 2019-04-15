@@ -38,7 +38,7 @@ function getCraPaths(cracoConfig) {
 /************  Webpack Dev Config  *******************/
 
 function getWebpackDevConfigPath(cracoConfig) {
-    return resolveConfigFilePath(cracoConfig, (cracoConfig.reactScriptsVersion === "nw-react-scripts") ? "webpack.dev.config" : "webpack.config");
+    return resolveConfigFilePath(cracoConfig, (cracoConfig.reactScriptsVersion === "nw-react-scripts") ? "webpack.config.dev" : "webpack.config");
 }
 
 function loadWebpackDevConfig(cracoConfig) {
@@ -58,7 +58,7 @@ function overrideWebpackDevConfig(cracoConfig, newConfig) {
 /************  Webpack Prod Config  *******************/
 
 function getWebpackProdConfigPath(cracoConfig) {
-    return resolveConfigFilePath(cracoConfig, (cracoConfig.reactScriptsVersion === "nw-react-scripts") ? "webpack.prod.config" : "webpack.config");
+    return resolveConfigFilePath(cracoConfig, (cracoConfig.reactScriptsVersion === "nw-react-scripts") ? "webpack.config.prod" : "webpack.config");
 }
 
 function loadWebpackProdConfig(cracoConfig) {
